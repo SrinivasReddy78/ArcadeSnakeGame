@@ -3,7 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; background-size: cover;
+    background-image: url("snake.jpg");
+}
 .container {
     width: 100vw;
     height: 100vh;
@@ -12,9 +17,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("snake.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .gamebox {
@@ -80,12 +82,13 @@
     border: 1px solid;
 }
 
-@media (max-width:600px) {
-    .container{
+@media (min-width:100px) and (max-width:600px) {
+    body{
         background: url("snakemobile.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+        /* background-position: center center; */
+        background-attachment: fixed;
+        background-repeat: no-repeat; background-size: cover;
+        }
     .score{
         top: 16%;
         left: 8%;
