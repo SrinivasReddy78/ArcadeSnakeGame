@@ -66,22 +66,30 @@ body{
     font-size: 20px;
     color: black;
 }
-.controls{
-    /* display: flex; */
-    /* align-items: center; */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    bottom: 2vmin;
-    width: auto;
-}
-.btn{
-    padding: 5px 20px;
-    margin: 4px 8px;
-    background-color: yellow;
-    font-size: 18px;
-    outline: none;
-    border: 1px solid;
+    display: none;
 }
 
+.horizontal {
+    display: flex;
+    gap: 40px;
+}
+
+.controls .btn {
+    /* padding: 5px 10px; */
+    width: 40px;
+    height: 38px;
+    font-size: 25px;
+    outline: none;
+    background-color: yellow;
+    border: 1px solid;
+    position: relative;
+}
 @media (min-width:100px) and (max-width:600px) {
     body{
         background: url("snakemobile.jpg");
@@ -100,8 +108,9 @@ body{
         font-size: 16px;
     }
     .controls{
-        right: 4%;
-        bottom: 10%;
+        display: flex;
+        right: 20%;
+        bottom: 2%;
     }
     .btn{
         font-size:16px ;
